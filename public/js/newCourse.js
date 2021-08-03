@@ -12,6 +12,10 @@ function publishCourse(){
         courseName: courseName.value,
         courseDescription: courseDescription.value 
     })
+      .then(() => {
+    courseName.value = "";
+    courseDescription.value = "";
+  });
 
 
 }

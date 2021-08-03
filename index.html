@@ -28,6 +28,7 @@
     </style>
   </head>
   <body>
+      
     <!--bubbles background-->
     <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@0.2.3/dist/bubbly-bg.js"></script>
     <script>bubbly({
@@ -35,12 +36,16 @@
     colorStop: "#422",
     bubbleFunc: () => `hsla(0, 100%, 50%, ${Math.random() * 0.25})`}); </script>
     
-    <!-- title for top-->
-    <div >
-
-    </div>
+    <!-- Page -->
     
     <section class="hero is-fullheight is-default is-bold">
+        <div class="hero-head" style="color:white">
+            <div style="float: right;">
+        <img style="border:0" src="https://cdn.glitch.com/53a7a634-945e-4d08-a68d-eed09de32a3e%2Fbtn_google_signin_light_pressed_web%402x.png?v=1627430901319" alt="Google sign in" width="250" height="100">
+    </div>
+            <h2 style="font-size:30px">Welcome</h2>
+        </div>
+        
       <div class="hero-body">
         <div class="container has-text-centered">
           <div class="columns is-vcentered">
@@ -48,6 +53,18 @@
               <h1 class="title is-2">
                 <p style="color:white;">Rate My Online Course</p>
               </h1>
+
+        <div class="field has-addons">
+          <div class="control is-expanded autocomplete">
+            <input class="input" width="100%" type="text" id="findLabel" placeholder="Search for Courses" autocomplete="on">
+          </div>
+          <div class="control">
+            <button class="button is-info" onclick="filterByLabel()">
+              Search 
+            </button>
+          </div>
+        </div>
+
               <!--<p >
                 <a 
                   onclick="signIn()"

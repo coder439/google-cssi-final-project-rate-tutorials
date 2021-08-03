@@ -47,11 +47,16 @@
     <section class="hero is-fullheight is-default is-bold">
         <div class="hero-head" style="color:white">
             <div style="float: right;">
-                <a onclick="signIn()">
+                
+                <a 
+                  onclick= "signIn()"
+                >
                   <img style="border:0" src="https://cdn.glitch.com/53a7a634-945e-4d08-a68d-eed09de32a3e%2Fbtn_google_signin_light_pressed_web%402x.png?v=1627430901319" alt="Google sign in" width="250" height="100">
-                </a> 
+
+                </a>
+              
     </div>
-            <h2 style="font-size:30px">Welcome</h2>
+            <h2 style="font-size:30px" id="customNameWelcome">Welcome</h2>
         </div>
         
       <div class="hero-body">
@@ -86,11 +91,11 @@
   <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase.js"></script>
 
   <!--   Authenticates firebase client with your firebase instance -->
-  <script src="js/firebase.js"></script>
+  <script src="public/js/firebase.js"></script>
 
   <!--  INCLUDE ALL APPLICATION SCRIPTS HERE-->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/signIn.js"></script>
+  <script src="public/js/signIn.js"></script>
 
 </html>

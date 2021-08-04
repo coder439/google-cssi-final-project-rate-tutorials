@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fire Notes</title>
+    <title>Rate the course</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -16,11 +16,22 @@
     <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <script defer src="public/js/newCourse.js"></script>
-
   </head>
   <body>
-
+  
+    <!--bubbles background-->
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@0.2.3/dist/bubbly-bg.js"></script>
+    <script>bubbly({
+    colorStart: "#111",
+    colorStop: "#422",
+    bubbleFunc: () => `hsla(0, 100%, 50%, ${Math.random() * 0.25})`}); </script>
     <section class="hero is-fullheight">
+        <div class="hero-head" style="text-align: center">
+            <br>
+            <div style="color:white;">
+            <div style="font-size:50px">Add a New Course</div>
+        </div>
+        </div>
       <div class="hero-body">
         <div class="container has-text-centered">
           <div class="columns is-8 is-variable ">
@@ -28,23 +39,35 @@
  
 
             <!-- NOTE FORM -->
-            <div class="column is-one-third has-text-center">
+            <div class="column is-centered has-text-center">
               <div class="field">
-                <label class="label">Course Name</label>
+                <label class="label" style="color:white;">Course Name</label>
                 <div class="control">
                   <input class="input is-medium" type="text" id="courseName">
                 </div>
               </div>
               <div class="field">
-                <label class="label">course Description</label>
+                <label class="label" style="color:white;">Course Description</label>
                 <div class="control">
                   <textarea class="textarea is-medium" id="courseDescription"></textarea>
                 </div>
+<br>
+<label class="label" style="color:white;">Upload Course Image</label>
+<div class="file is-centered">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume" id="courseImage">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Select file...
+      </span>
+    </span>
+  </label>
+</div>
+<br>
               </div>
-
-
-
-
 
               <div class="control">
                 <button class="button is-link is-fullwidth has-text-weight-medium is-medium" onclick="publishCourse()"> Publish Course</button>
@@ -57,4 +80,5 @@
     </section>
 
   </body>
-</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </html>

@@ -19,16 +19,10 @@
   </head>
   <body>
   
-    <!--bubbles background-->
-    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@0.2.3/dist/bubbly-bg.js"></script>
-    <script>bubbly({
-    colorStart: "#111",
-    colorStop: "#422",
-    bubbleFunc: () => `hsla(0, 100%, 50%, ${Math.random() * 0.25})`}); </script>
-    <section class="hero is-fullheight">
+  <section class="hero is-fullheight">
         <div class="hero-head" style="text-align: center">
             <br>
-            <div style="color:white;">
+            <div style="color:black;">
             <div style="font-size:50px">Add a New Course</div>
         </div>
         </div>
@@ -41,18 +35,18 @@
             <!-- NOTE FORM -->
             <div class="column is-centered has-text-center">
               <div class="field">
-                <label class="label" style="color:white;">Course Name</label>
+                <label class="label" style="color:black;">Course Name</label>
                 <div class="control">
                   <input class="input is-medium" type="text" id="courseName">
                 </div>
               </div>
               <div class="field">
-                <label class="label" style="color:white;">Course Description</label>
+                <label class="label" style="color:black;">Course Description</label>
                 <div class="control">
                   <textarea class="textarea is-medium" id="courseDescription"></textarea>
                 </div>
 <br>
-<label class="label" style="color:white;">Upload Course Image</label>
+<label class="label" style="color:black;">Upload Course Image</label>
 <div id="file-js-example" class="file has-name is-centered">
   <label class="file-label">
     <input class="file-input" type="file" name="resume" id="courseImage">
@@ -64,7 +58,7 @@
         Choose a file…
       </span>
     </span>
-    <span class="file-name" style="color:white;">
+    <span class="file-name" style="color:black;">
                   No file uploaded
     </span>
   </label>

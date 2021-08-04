@@ -45,3 +45,19 @@ window.onload = (event) => {
     };
   });
 };
+
+function filterByLabel() {
+  const findLabel = document.querySelector("#findLabel");
+  const findLabelVal = "." + findLabel.value;
+  const notes = document.querySelectorAll(findLabelVal);
+
+  let cards = ``;
+  for (var i = 0; i < notes.length; i++) {
+    cards += '<div class="column is-one-quarter">';
+    cards += notes[i].outerHTML;
+    cards += "</div>";
+  }
+
+  document.querySelector("#app").innerHTML = cards;
+  findLabel.value = "";
+}

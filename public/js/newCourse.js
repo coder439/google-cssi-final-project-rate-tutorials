@@ -13,7 +13,7 @@ function publishCourse(){
     firebase.database().ref(`courses/${courseName.value}`).push({
         courseName: courseName.value,
         courseDescription: courseDescription.value 
-        //courseImage: courseImage.value
+        //courseImage: courseImage.value,
     })
       .then(() => {
     courseName.value = "";

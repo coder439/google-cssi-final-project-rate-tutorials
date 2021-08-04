@@ -1,3 +1,6 @@
+
+console.log("new review")
+console.log(document.cookie)
 const addReview = (courseName, reviewTitle, reviewBody) => {
    const courseRef = firebase.database().ref(`courses/${courseName}`)
    courseRef.on('value',(snapshot) => {

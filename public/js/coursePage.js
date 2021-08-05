@@ -4,12 +4,12 @@ let params = (new URL(document.location)).searchParams;
 let courseNameValue = params.get("courseName");
 document.querySelector("#name").innerHTML = courseNameValue
 document.querySelector("#courseDescription").innerHTML = "learning "
-const reviewContent = document.querySelector("#reviewContent")
 setCourseDescriptionName(courseNameValue)
 const courseName = document.querySelector("#name").innerHTML
-loadHTML(courseName)
-
+const reviewHTML = loadHTML(courseName)
+//window.setTimeout(assignHTML, 3000)
 }
+
 function setCourseDescriptionName(courseNameValue){
     const courseRef = firebase.database().ref(`courses/${courseNameValue}`)
    courseRef.get().then((snapshot) => {
@@ -18,7 +18,6 @@ function setCourseDescriptionName(courseNameValue){
         const courseRef1 = firebase.database().ref(`courses/${courseNameValue}/${outsideClassKey}`)
         courseRef1.get().then((snapshot) => {
             const value = snapshot.val()
-            console.log("tesitn smth")
             document.querySelector("#courseDescription").innerHTML = value.courseDescription
 
         })
@@ -31,7 +30,7 @@ function addNewReviewPage(courseNameValue){
 
 }
 function loadHTML(courseNameValue){
-    let itemContent =""
+    var itemContent =""
 const courseRef = firebase.database().ref(`courses/${courseNameValue}`)
    courseRef.get().then((snapshot) => {
         const value = snapshot.val()
@@ -55,14 +54,18 @@ const courseRef = firebase.database().ref(`courses/${courseNameValue}`)
                             <footer class="card-footer">
                              </footer>
                             </div>`;
-                    console.log(value1.reviewBody)
+                            console.log("pringint item content one at a time")
+                            console.log(itemContent)
+                        document.querySelector("#reviewContent").innerHTML = itemContent
+
                 })
    }
+   return itemContent
    })
    
 
 
 })  
-      
+      console.log(itemContent)
      return itemContent
 }

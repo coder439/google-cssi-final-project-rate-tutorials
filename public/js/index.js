@@ -7,7 +7,34 @@ console.log("index.js running")
 function navigateToCourse(){
     const courseName = document.querySelector('#myInput');
     console.log(courseName.value)
-    location.href = `coursePage.html?courseName=${courseName.value}`
+    validateCourseName(courseName.value)
+//     console.log(validateCourseName(courseName.value))
+//     if (validateCourseName(courseName.value) === true){
+//         console.log("valid courseName")
+//         switchPage(courseName.value)
+
+//     }
+//     else {
+//         console.log("not valid courseName")
+//     }
+// }
+// function switchPage(courseNameValue){
+        
+}
+function validateCourseName(courseNameValue){
+        const courseRef = firebase.database().ref(`courses/${courseNameValue}`)
+        courseRef.get().then((snapshot) => {
+        const value = snapshot.val()
+        console.log("val below")
+        console.log(value)
+        if (value === null ){
+            alert("the course you are searching for does not exist")
+            location.href = `index.html`
+        }
+        else {
+            location.href = `coursePage.html?courseName=${courseNameValue}`
+        }
+})
 }
 
 autocomplete(document.getElementById("myInput"), courses);

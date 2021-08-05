@@ -4,6 +4,8 @@ let params = (new URL(document.location)).searchParams;
 let courseNameValue = params.get("courseName");
 document.querySelector("#name").innerHTML = courseNameValue
 setCourseDescriptionName(courseNameValue)
+console.log(courseNameValue)
+
 const reviewHTML = loadHTML(courseNameValue)
 //window.setTimeout(assignHTML, 3000)
 }
@@ -12,6 +14,12 @@ function setCourseDescriptionName(courseNameValue){
     const courseRef = firebase.database().ref(`courses/${courseNameValue}`)
     courseRef.get().then((snapshot) => {
         const value = snapshot.val()
+        console.log("val below")
+        console.log(value)
+        // if (value ===null ){
+        //     location.href = `index.html`
+        // }
+
         var uniqueKey = Object.keys(value)[0]
         const courseRef1 = firebase.database().ref(`courses/${courseNameValue}/${uniqueKey}`)
         courseRef1.get().then((snapshot) => {

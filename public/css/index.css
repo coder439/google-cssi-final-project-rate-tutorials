@@ -48,3 +48,12 @@ cool[type=submit] {
   background-color: DodgerBlue !important;
   color:white;
 }
+#strokeme
+{
+    color: green;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}

@@ -13,8 +13,9 @@ const publishReview = () => {
    courseRef.on('value',(snapshot) => {
      const value = snapshot.val()
      console.log(value)
+     console.log("test")
      const classKey = Object.keys(value)[0]
-     firebase.database().ref(`courses/${coursecourseNameValueName}/${classKey}/reviews`).push({
+     firebase.database().ref(`courses/${courseNameValue}/${classKey}/reviews`).push({
          courseName: courseNameValue,
          reviewBody: reviewDescription
      })

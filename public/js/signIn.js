@@ -41,7 +41,7 @@ window.onload = (event) => {
       getNotes(googleUserId);
     } else {
       // If not logged in, navigate back to login page.
-      window.location = 'index.html'; 
+    //   window.location = 'index.html'; 
     };
   });
 };

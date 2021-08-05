@@ -1,3 +1,24 @@
+function getArrayOfCourseNames(){
+
+    arrayOfCourseNames = []
+    const courseRef = firebase.database().ref(`courses`)
+        courseRef.get().then((snapshot) => {
+            const value = snapshot.val()
+            for (const prop in value) {
+                arrayOfCourseNames.push(prop)
+            
+            }
+        })
+        console.log(arrayOfCourseNames)
+        return arrayOfCourseNames
+}
+var courses = getArrayOfCourseNames()
+     console.log(courses)
+
+
+
+
+
 console.log("index.js running")
 function dummyMethod(){
     console.log("dummy method")
@@ -6,8 +27,8 @@ function dummyMethod(){
     location.href = `coursePage.html?courseName=${courseName.value}`
 }
 
-autocomplete(document.getElementById("myInput"), countries);
-autocomplete(document.getElementById("myInput"), countries);
+autocomplete(document.getElementById("myInput"), courses);
+//autocomplete(document.getElementById("myInput"), countries);
 
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,

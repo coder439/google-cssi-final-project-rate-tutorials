@@ -113,23 +113,6 @@ body {
 
   <!--  INCLUDE ALL APPLICATION SCRIPTS HERE-->
  <script>
-function getArrayOfCourseNames(){
-    arrayOfCourseNames = []
-    const courseRef = firebase.database().ref(`courses`)
-        courseRef.get().then((snapshot) => {
-            const value = snapshot.val()
-            for (const prop in value) {
-                arrayOfCourseNames.push(prop)
-            
-            }
-        })
-        console.log(arrayOfCourseNames)
-        return arrayOfCourseNames
-}
 
-
-
-     var countries = getArrayOfCourseNames()
-     console.log(countries)
  </script>
 </html>

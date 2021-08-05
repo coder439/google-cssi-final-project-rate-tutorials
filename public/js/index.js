@@ -27,7 +27,7 @@ function validateCourseName(courseNameValue){
         const value = snapshot.val()
         console.log("val below")
         console.log(value)
-        if (value === null ){
+        if (value === null || courseNameValue=== ''){
             alert("the course you are searching for does not exist")
             location.href = `index.html`
         }

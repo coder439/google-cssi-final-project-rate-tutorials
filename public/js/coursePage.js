@@ -12,8 +12,10 @@ const reviewHTML = loadHTML(courseName)
 
 function setCourseDescriptionName(courseNameValue){
     const courseRef = firebase.database().ref(`courses/${courseNameValue}`)
-   courseRef.get().then((snapshot) => {
+    console.log(courseNameValue)
+    courseRef.get().then((snapshot) => {
         const value = snapshot.val()
+        console.log(value)
         var outsideClassKey = Object.keys(value)[0]
         const courseRef1 = firebase.database().ref(`courses/${courseNameValue}/${outsideClassKey}`)
         courseRef1.get().then((snapshot) => {

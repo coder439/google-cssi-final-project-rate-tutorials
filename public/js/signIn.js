@@ -30,6 +30,7 @@ const signIn = () => {
   document.getElementById("customNameWelcome").innerHTML = "Hi, " + user.displayName;
 }
 
+
 let googleUserId;
 
 window.onload = (event) => {
@@ -39,6 +40,9 @@ window.onload = (event) => {
       document.getElementById("customNameWelcome").innerHTML = "Hi, " + user.displayName;
       googleUserId = user.uid;
       getNotes(googleUserId);
+      console.log("make button hidden")
+      document.getElementById("signInButton").style.visibility = "hidden";    
+
     } else {
       // If not logged in, navigate back to login page.
     //   window.location = 'index.html'; 

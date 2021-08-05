@@ -61,27 +61,37 @@
 
 <!--Make sure the form has the autocomplete function switched off:-->
 
-<form autocomplete="off" action="/action_page.php">
+<!-- <form autocomplete="off" action="/action_page.php">
   <div class="autocomplete" style="width:300px;">
     <input id="myInput" type="text" name="myCountry" placeholder="Country">
   </div>
   <input type="submit">
 </form> 
+ -->
+
+<form autocomplete="off">
+  <div class="autocomplete" style="width:300px;">
+    <input id="myInput" type="text" name="myCountry" placeholder="Search for courses">
+  </div>
+<!-- <input type="submit"> -->
+</form> 
 
 
 
-        <div class="field has-addons">
+
+
+        <!-- <div class="field has-addons">
           <div class="control is-expanded autocomplete">
-            <input class="input" width="100%" type="text" id="findLabel" placeholder="Search for Courses" autocomplete="on">
+            <input class="input" width="100%" type="text" id="findLabel" placeholder="Search for Courses" autocomplete="off">
           </div>
           <div class="control">
             <button class="button is-info">
               Search 
             </button>
           </div>
-        </div>
-              <button type="button" id="button" onclick="location.href = 'coursePage.html';" >View Course</button>
-            <button type="button" id="button" onclick="location.href = 'newCourse.html';" >Add a new course</button>
+        </div> -->
+              <button type="button" id="button" onclick="dummyMethod()";" >View Course</button>
+            <button type="button" id="button1" onclick="location.href = 'newCourse.html';" >Add a new course</button>
 
             </div>
           </div>
@@ -92,15 +102,47 @@
 
   <!--   Includes firebase core and all secondary SDKs. No need for other firebase CDN scripts. -->
   <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase.js"></script>
+  <script defer src="public/js/index.js"></script>
 
   <!--   Authenticates firebase client with your firebase instance -->
   <script src="public/js/firebase.js"></script>
 
   <!--  INCLUDE ALL APPLICATION SCRIPTS HERE-->
  <script>
-     var countries = ["apples","bananas","green"];
+function getArrayOfCourseNames(){
+    arrayOfCourseNames = []
+    const courseRef = firebase.database().ref(`courses`)
+        courseRef.get().then((snapshot) => {
+            const value = snapshot.val()
+            for (const prop in value) {
+                arrayOfCourseNames.push(prop)
+            
+            }
+        })
+        console.log(arrayOfCourseNames)
+        return arrayOfCourseNames
+}
+
+
+
+     var countries = getArrayOfCourseNames()
+     console.log(countries)
  </script>
  <script>
+
+
+// function createArray(){
+
+   
+
+
+// }
+
+
+
+
+
+
  function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -200,6 +242,7 @@ document.addEventListener("click", function (e) {
  </script>
 
 <script>
+autocomplete(document.getElementById("myInput"), countries);
 autocomplete(document.getElementById("myInput"), countries);
 </script>
 

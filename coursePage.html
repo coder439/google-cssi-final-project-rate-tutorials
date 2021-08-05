@@ -5,13 +5,23 @@
 <meta name="description" content="Our first page">
 <meta name="keywords" content="html tutorial template">
 <script defer src="public/js/coursePage.js"></script>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
 </head>
 <body>
 
 <h1 id="name"> Course Name </h1>
 <p id ="courseDescription"> Course Description</p>
 
+
             <button type="button" id="button" onclick=addNewReviewPage(); >Add a new review</button>
+<div id="reviewContent">ayo</div>
+
 
 
 

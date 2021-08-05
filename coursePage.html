@@ -12,19 +12,50 @@
     <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
           <link rel="stylesheet" href="public/css/coursePage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
 
 </head>
 <body>
+<div class="card">
+  <!--<div class="card-image" style="text-align: center">
+    <figure >
+      <img src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
+    </figure>
+  </div>-->
+  <div class="card-content">
+    <div>
+      <div >
+        <p id="name" style="text-align: center; font-size:50px; font-weight: bold;" >Course Name</p>
+      </div>
+    </div>
 
+    <div id ="courseDescription" style="text-align: center; font-size:20px">
+        Course Description
+      <br>
+    </div>
+  </div>
+</div>
+
+
+<!--
 <h1 id="name" class="center"> Course Name </h1>
 <p id ="courseDescription" class="center"> Course Description</p>
+-->
+<div class="buttons" style="float: right; margin-right: 2.5%; margin-top: 2.5%;">
+  <button type="button" id="button" onclick=addNewReviewPage(); class="centerButton; button is-link">Add a new review</button>
+</div>
 
-
-            <button type="button" id="button" onclick=addNewReviewPage(); class="centerButton" >Add a new review</button>
-<div id="reviewContent" class="center">No Reviews Published yet</div>
-
-
+<!--<button type="button" id="button" onclick=addNewReviewPage(); class="centerButton" >Add a new review</button> -->
+<!--<div id="reviewContent" class="center">No Reviews Published yet</div>-->
+<br>
+<br>
+<br>
+<br>
+    <div class="card-content"
+    <p id="reviewContent" class="center">No Reviews Published yet</p>
+    <br>
+</div>
 
 
 </body>

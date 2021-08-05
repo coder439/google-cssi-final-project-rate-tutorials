@@ -16,6 +16,8 @@
     <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <script defer src="public/js/newReview.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+
 
   </head>
   <body>
@@ -31,7 +33,7 @@
             <div class="column is-half is-offset-one-quarter has-text-center">
                 <h2 id="courseName" style="font-size:40px; font-weight: bold;"></h2>
               <div class="field">
-                <label class="label">Please write your review</label>
+                  <p class="label" id="simplebeep"></p>
                 <div class="control">
                   <textarea class="textarea is-medium" id="reviewDescription"> </textarea>
                 </div>

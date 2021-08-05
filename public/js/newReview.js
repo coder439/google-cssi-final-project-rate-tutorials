@@ -26,4 +26,8 @@ function actuallyPublishReview(courseNameValue, classKey, reviewDescription){
      location.href = `coursePage.html?courseName=${courseNameValue}`
     }
 
-        
+new TypeIt("#simplebeep", {
+  strings: "Please Write Your Review.",
+  speed: 50,
+  waitUntilVisible: true
+}).go();

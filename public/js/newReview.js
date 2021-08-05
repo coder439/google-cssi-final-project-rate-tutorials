@@ -1,27 +1,27 @@
-const reviewDescription = document.querySelector('#reviewDescription').innerHTML
 let params = (new URL(document.location)).searchParams;
 let courseNameValue = params.get("courseName");
 courseNameh2 = document.querySelector('#courseName')
 courseNameh2.innerHTML = courseNameValue
 
-const publishReview = () => {
-    const reviewDescription = document.querySelector('#reviewDescription').innerHTML
+const findPlaceToPutReview = () => {
+    const reviewDescription = document.querySelector('#reviewDescription')
     let params = (new URL(document.location)).searchParams;
     let courseNameValue = params.get("courseName");
-    console.log(courseNameValue)
 
    const courseRef = firebase.database().ref(`courses/${courseNameValue}`)
-   courseRef.on('value',(snapshot) => {
+   courseRef.get().then((snapshot) => {
      const value = snapshot.val()
-     console.log(value)
-     console.log()
      const classKey = Object.keys(value)[0]
-     actuallyPublishReview(courseNameValue, classKey, reviewDescription)
-     console.log("test")
-
-
-
-
+     reviewDescriptionCopy = reviewDescription.value
+     console.log(reviewDescriptionCopy)
+     reviewDescription.value =""
+     actuallyPublishReview(courseNameValue, classKey, reviewDescriptionCopy)
+     reviewDescription.value ="";
+   })
+    .then(() => {
+        reviewDescription.value = "";
+     });
+   //courseRef.on('value',(snapshot) =>
 // function writeUserData(userId, name, email, imageUrl) {
 //   firebase.database().ref('users/' + userId).set({
 //     username: name,
@@ -29,12 +29,21 @@ const publishReview = () => {
 //     profile_picture : imageUrl
 //   });
 // }
-   })
-}
+   }
+
 function actuallyPublishReview(courseNameValue, classKey, reviewDescription){
 
-         firebase.database().ref(`courses/${courseNameValue}/${classKey}/reviews`).set({
+        // reviewRef = firebase.database().ref(`courses/${courseNameValue}/${classKey}/reviews`)
+        // reviewRef.get().then((snapshot) => {
+        // const value = snapshot.val()
+        // console.log("trying to find array of reviews")
+        // console.log(value)
+        // } )
+
+         firebase.database().ref(`courses/${courseNameValue}/${classKey}/reviews`).push({
          courseName: courseNameValue,
          reviewBody: reviewDescription
      })
-}
+    }
+
+        

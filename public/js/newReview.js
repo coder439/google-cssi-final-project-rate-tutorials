@@ -23,6 +23,7 @@ function actuallyPublishReview(courseNameValue, classKey, reviewDescription){
          courseName: courseNameValue,
          reviewBody: reviewDescription
      })
+     location.href = `coursePage.html?courseName=${courseNameValue}`
     }
 
         

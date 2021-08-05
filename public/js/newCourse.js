@@ -21,6 +21,7 @@ function publishCourse(){
     courseName.value = "";
     courseDescription.value = "";
     courseImage.value = "";
+    location.href = `index.html`
   });
 }
 function filterByLabel() {

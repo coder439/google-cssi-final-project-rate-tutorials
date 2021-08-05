@@ -1,3 +1,9 @@
+new TypeIt("#simpleUsage", {
+  strings: "Add a new course.",
+  speed: 50,
+  waitUntilVisible: true
+}).go();
+
 console.log("hello")
 
 function publishCourse(){

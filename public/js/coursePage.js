@@ -24,8 +24,10 @@ function setCourseDescriptionName(courseNameValue){
         })
 })
 }
-function addNewReviewPage(){
-    window.location = `newReview.html?courseName=${courseName}`
+function addNewReviewPage(courseNameValue){
+    let params = (new URL(document.location)).searchParams;
+    let courseNameValue1 = params.get("courseName");
+    window.location = `newReview.html?courseName=${courseNameValue1}`
 
 }
 function loadHTML(courseNameValue){

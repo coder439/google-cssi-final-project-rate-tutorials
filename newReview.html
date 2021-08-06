@@ -17,6 +17,9 @@
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <script defer src="public/js/newReview.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 <style> 
 body {
   background-image: url("https://plainbackground.com/plain1024/88a3d0.png");
@@ -36,9 +39,11 @@ body {
 
             <!-- NOTE FORM -->
             <div class="column is-half is-offset-one-quarter has-text-center">
-                <h2 id="courseName" style="font-size:40px; font-weight: bold;"></h2>
+                <h2 id="courseName" style="font-size:40px; font-weight: bold; font-family: 'Patrick Hand', cursive;"></h2>
+                <br>
+                <br>
               <div class="field">
-                  <p class="label" id="simplebeep"></p>
+                  <p style="font-family: 'Patrick Hand', cursive; font-size: 30px" class="label" id="simplebeep"></p>
                 <div class="control">
                   <textarea class="textarea is-medium" id="reviewDescription"> </textarea>
                 </div>
@@ -51,7 +56,7 @@ body {
 
 
               <div class="control">
-                <button class="button is-link is-fullwidth has-text-weight-medium is-medium" onclick="findPlaceToPutReview()"> Publish Review</button>
+                <button style="font-family: 'Patrick Hand', cursive; font-size: 20px" class="button is-link is-fullwidth has-text-weight-medium is-medium" onclick="findPlaceToPutReview()"> Publish Review</button>
               </div>
             </div>
             

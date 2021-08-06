@@ -1,6 +1,6 @@
 new TypeIt("#simpleUsage", {
   strings: "Add a new course.",
-  speed: 50,
+  speed: 120,
   waitUntilVisible: true
 }).go();
 

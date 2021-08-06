@@ -136,3 +136,8 @@ document.addEventListener("click", function (e) {
     closeAllLists(e.target);
 });
 }
+new TypeIt("#simpleYummy", {
+  strings: "Rate my Online Course.",
+  speed: 80,
+  waitUntilVisible: true
+}).go();

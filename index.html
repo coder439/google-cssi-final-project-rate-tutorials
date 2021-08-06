@@ -31,6 +31,11 @@
    <!-- include only the Firebase features as you need -->
    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+   <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
 <style> 
 body {
   background-image: url("https://plainbackground.com/plain1024/88a3d0.png");
@@ -55,13 +60,13 @@ body {
                 </a>
 
     </div>
-            <div style= "color: white;
+            <div style="color: white;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;"</div>
-            <div style="font-size:30px" id="customNameWelcome">Welcome</div>
+            <div style="font-size:30px; font-family: 'Patrick Hand', cursive; margin-left:1%;" id="customNameWelcome" >Welcome</div>
                 </div>
         </div>
 
@@ -70,13 +75,13 @@ body {
           <div class="columns is-vcentered">
             <div class="column is-6 is-offset-3">
               <h1 class="title is-2">
-                <p style= "color: white;
+                <p id="simpleYummy" style= "color: white;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000;">Rate My Online Course</p>
-              </h1>
+    1px 1px 0 #000; font-family: 'Patrick Hand', cursive; font-size:60px"></p>
+            </h1>
 
 <!--new search bar-->
 <div class="field has-addons" style="color:white">
@@ -89,8 +94,8 @@ body {
   </div>
 
 <!--New view course and add new course buttons-->
-            <button class="button is-info" type="button" id="button" onclick="navigateToCourse()";">View Course</button>
-            <button class="button is-info" type="button" id="button1" onclick="location.href = 'newCourse.html';" >Add New Course</button>
+            <button style="font-family: 'Patrick Hand', cursive; font-size:20px;" class="button is-info" type="button" id="button" onclick="navigateToCourse()";">View Course</button>
+            <button style="font-family: 'Patrick Hand', cursive;font-size:20px;" class="button is-info" type="button" id="button1" onclick="location.href = 'newCourse.html';" >Add New Course</button>
 
             </div>
           </div>

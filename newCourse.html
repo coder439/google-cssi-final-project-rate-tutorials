@@ -17,10 +17,14 @@
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <script defer src="public/js/newCourse.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
   <style> 
 body {
   background-image: url("https://plainbackground.com/plain1024/88a3d0.png");
     opacity: 1
+    font-family: 'Patrick Hand', cursive;
 }
 </style>
 
@@ -32,7 +36,7 @@ body {
             <br>
             <br>
             <br>
-            <p id="simpleUsage" style="color:black; font-size: 45px; text-align:center"></p>
+            <p id="simpleUsage" style=" color:black; font-family: 'Patrick Hand', cursive; font-size: 45px; text-align:center"></p>
         </div>
 
         </div>
@@ -42,14 +46,14 @@ body {
             <!-- NOTE FORM -->
             <div class="column is-centered has-text-center">
               <div class="field">
-                <label class="label" style="color:black;">Course Name</label>
+                <label class="label" style="color:black; font-family: 'Patrick Hand', cursive; font-size:30px">Course Name</label>
                 <div class="control">
                   <input class="input is-medium" type="text" id="courseName">
                 </div>
               </div>
               
               <div class="field">
-                <label class="label" style="color:black;">Course Description</label>
+                <label class="label" style="color:black; font-family: 'Patrick Hand', cursive; font-size:30px">Course Description</label>
                 <div class="control">
                   <textarea class="textarea is-medium" id="courseDescription"></textarea>
                 </div>
@@ -68,7 +72,7 @@ body {
       -->       
 
               <div class="control">
-                <button class="button is-link is-fullwidth has-text-weight-medium is-medium" onclick="publishCourse()"> Publish Course</button>
+                <button class="button is-link is-fullwidth has-text-weight-medium is-medium" onclick="publishCourse()" style="font-family: 'Patrick Hand'; font-size:23px"> Publish Course</button>
               </div>
               
             </div>
